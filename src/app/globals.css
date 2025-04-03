@@ -5,11 +5,23 @@
   --foreground: #171717;
 }
 
+@font-face {
+  font-family: 'Ticketing';
+  src: url('/fonts/ticketing.regular.ttf') format('truetype');
+  font-weight: 400;
+  font-style: l;
+}
+
+:root {
+  --font-ticketing: "Ticketing", sans-serif;
+}
+
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
+  --font-tiny5: "Tiny5", sans-serif;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -19,8 +31,71 @@
   }
 }
 
+.video-overlay {
+  mix-blend-mode: lighten;
+  /* Or 'screen' depending on the effect */
+  opacity: 0.5;
+  /* Adjust transparency */
+  filter: contrast(1.5) brightness(1.2);
+  /* Tweak for better visibility */
+}
+
+@keyframes wiggle {
+
+  0%,
+  100% {
+    transform: translateY(-10px);
+  }
+
+  /* Moves slightly up */
+  50% {
+    transform: translateY(10px);
+  }
+
+  /* Moves slightly down */
+}
+
+@layer utilities {
+
+  /* Clockwise Rotation */
+  .spin {
+    animation: spin-clockwise 15s linear infinite;
+  }
+
+  /* Anticlockwise Rotation */
+  .spin-slow {
+    animation: spin-anticlockwise 15s linear infinite;
+  }
+
+  /* Keyframes for Clockwise Spin */
+  @keyframes spin-clockwise {
+    0% {
+      transform: rotate(0deg);
+    }
+
+    100% {
+      transform: rotate(360deg);
+    }
+  }
+
+  /* Keyframes for Anticlockwise Spin */
+  @keyframes spin-anticlockwise {
+    0% {
+      transform: rotate(0deg);
+    }
+
+    100% {
+      transform: rotate(-360deg);
+    }
+  }
+}
+
+
+
+
 body {
   background: var(--background);
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-ticketing);
 }
