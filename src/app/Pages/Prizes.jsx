@@ -2,7 +2,7 @@ import React from "react";
 
 const Prizes = () => {
   return (
-    <div className="bg-blue-900 text-white py-10 flex flex-col items-center">
+    <div className="[;lo] text-white py-10 flex flex-col items-center">
       <div className="relative">
         {/* Top outline layer */}
         <span className="absolute transform -translate-y-1 text-opacity-100  text-stroke-2 text-blue-300 font-ticket text-6xl font-bold uppercase">
@@ -10,7 +10,7 @@ const Prizes = () => {
         </span>
         {/* Middle filled layer */}
         <span className="absolute z-60 text-white font-ticket text-3xl font-bold uppercase">
-          PRIZES
+          __PRIZES__
         </span>
         {/* Bottom outline layer */}
         <span className="absolute transform translate-y-1 text-transparent text-stroke-2 text-blue-300 font-ticket text-6xl font-bold uppercase">

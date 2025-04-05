@@ -6,6 +6,7 @@ import Navbar from "./Navbar";
 import Second from "./Second";
 import Third from "./Third";
 import Prizes from "./Prizes";
+import Tracks from "./Tracks";
 
 
 
@@ -107,7 +108,9 @@ export default function Home() {
 
             <Third />
 
-          <Prizes />
+            <Prizes />
+
+            <Tracks />
 
 
         </div >
